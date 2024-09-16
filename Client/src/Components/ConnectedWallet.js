@@ -53,7 +53,7 @@ const ConnectedWallet = ({ mnemonic, privateKey, address }) => {
         return;
       }
 
-      const response = await axios.post("http://localhost:5000/sendTransaction", {
+      const response = await axios.post("https://solana-developers-web-based-wallet.onrender.com/sendTransaction", {
         mnemonic,
         recipient: receiver,
         amount,
@@ -93,7 +93,7 @@ const ConnectedWallet = ({ mnemonic, privateKey, address }) => {
       }
 
       // Make the faucet request
-      const response = await axios.post("http://localhost:5000/ClaimFaucet", {
+      const response = await axios.post("https://solana-developers-web-based-wallet.onrender.com/ClaimFaucet", {
         address: receiver,
         amount,
       });
