@@ -27,7 +27,7 @@ function App() {
 
   async function getdata() {
     try {
-      const response = await axios.post("http://localhost:5000/generateWallet", {});
+      const response = await axios.post("https://solana-developers-web-based-wallet.onrender.com/generateWallet", {});
       const { Address, privateKey, mnemonic } = response.data;
 
       setAddress(Address);
